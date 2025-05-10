@@ -1,0 +1,8 @@
+#mainmenu {
+    background-color: #555;
+    color: #fff;
+    padding: 10px;
+}
+ul li:first-child {
+    background-color: #000;
+}

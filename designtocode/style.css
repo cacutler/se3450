@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#wrapper {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) repeat(6, minmax(0,175px)) minmax(0,1fr);
+    grid-template-rows: 0px auto;
+}
+body {
+    background-image: linear-gradient(#97D9E1, #D9AFD9);
+    background-attachment: fixed;
+}
+header {
+    grid-column: 2 / 3;
+}
+main {
+    margin: 0.5rem;
+    grid-column: 3 / 8;
+    background-color: white;
+    border-radius: 25px;
+    padding: 1rem 0;
+    position: relative;
+}
+footer {
+    grid-column: 3 / 8;
+    text-align: center;
+    color: white;
+    margin: 0.75rem;
+}
+p, h2 {
+    margin: 1rem;
+}
+h2 {
+    border-bottom: solid 1px rgb(78, 78, 78);
+    padding-bottom: 8px;
+    color: rgb(78, 78, 78);
+}
+main :nth-child(2), main :nth-child(4) {
+    float: left;
+}
+a img {
+    padding: 1rem;
+    margin: 1rem;
+    width: 75%;
+    height: auto;
+}
+main>img {
+    width: 12.5%;
+    height: auto;
+    float: right;
+    margin: 2rem;
+}
+header nav div ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    row-gap: 1rem;
+    margin: 0.5rem;
+}
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+header nav ul li a:active {
+    color: black;
+    background-color: white;
+}
+header nav ul li a:hover {
+    color: black;
+    background-color: white;
+    padding: 0.75rem 5rem;
+    border-radius: 5px;
+}
+li.current-menu-item a {
+    color: black !important;
+    background-color: white !important;
+    padding: 0.75rem 5rem;
+    border-radius: 5px;
+}
+@media only screen and (max-width: 960px) {
+    #wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    header nav div ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    header nav>a>img {
+        width: 20%;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    li.current-menu-item a {
+        padding: auto;
+    }
+    header nav ul li a:hover {
+        padding: auto;
+    }
+    header nav ul li a:active {
+        padding: auto;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        border-radius: 0;
+        padding: 0;
+        margin: 0;
+    }
+    main>img {
+        width: 100%;
+        height: auto;
+        margin: auto;
+        padding: 1rem;
+    }
+    footer {
+        padding: 1rem;
+    }
+}
